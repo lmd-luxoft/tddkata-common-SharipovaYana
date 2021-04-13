@@ -121,4 +121,11 @@ class CalcTest extends Object {
         int expected = -1;
         assertEquals(expected, actual);
     }
+    @Test
+    public void testAddNegative4(){
+        Calc calc = new Calc();
+        int actual = calc.add("5;6");
+        int expected = -1;
+        assertEquals(expected, actual);
+    }
 }
