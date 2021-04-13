@@ -43,4 +43,12 @@ class CalcTest extends Object {
         int expected = 3;
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void test0and1and2NotEquals(){
+        Calc calc = new Calc();
+        int actual = calc.sum("0,1,2");
+        int expected = 5;
+        assertNotEquals(expected, actual);
+    }
 }
