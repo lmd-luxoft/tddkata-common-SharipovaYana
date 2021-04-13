@@ -16,4 +16,8 @@ public class Calc {
         }
         return sum;
     }
+
+    public int add (String expression){
+        throw new UnsupportedOperationException();
+    }
 }
