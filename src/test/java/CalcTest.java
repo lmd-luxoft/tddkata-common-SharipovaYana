@@ -85,7 +85,7 @@ class CalcTest extends Object {
     @Test
     public void testAddFiveArguments(){
         Calc calc = new Calc();
-        int actual = calc.add("1,5,1,3,2");
+        int actual = calc.sum("1,5,1,3,2");
         int expected = 12;
         assertEquals(expected, actual);
     }
@@ -93,7 +93,7 @@ class CalcTest extends Object {
     @Test
     public void testAddEmptyString(){
         Calc calc = new Calc();
-        int actual = calc.add("");
+        int actual = calc.sum("");
         int expected = 0;
         assertEquals(expected, actual);
     }
@@ -101,7 +101,7 @@ class CalcTest extends Object {
     @Test
     public void testAddNegative1(){
         Calc calc = new Calc();
-        int actual = calc.add(".");
+        int actual = calc.sum(".");
         int expected = -1;
         assertEquals(expected, actual);
     }
@@ -109,7 +109,7 @@ class CalcTest extends Object {
     @Test
     public void testAddNegative2(){
         Calc calc = new Calc();
-        int actual = calc.add("123,,6");
+        int actual = calc.sum("123,,6");
         int expected = -1;
         assertEquals(expected, actual);
     }
@@ -117,14 +117,14 @@ class CalcTest extends Object {
     @Test
     public void testAddNegative3(){
         Calc calc = new Calc();
-        int actual = calc.add(null);
+        int actual = calc.sum(null);
         int expected = -1;
         assertEquals(expected, actual);
     }
     @Test
     public void testAddNegative4(){
         Calc calc = new Calc();
-        int actual = calc.add("5;6");
+        int actual = calc.sum("5;6");
         int expected = -1;
         assertEquals(expected, actual);
     }

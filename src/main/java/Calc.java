@@ -7,19 +7,7 @@ public class Calc {
             return 0;
 
         String[] numbers = expression.split(",");
-        if(numbers.length > 3)
-            return -1;
 
-        return getSum(numbers);
-    }
-
-    public int add (String expression){
-        if(expression == null)
-            return -1;
-        if (expression.isEmpty())
-            return 0;
-
-        String[] numbers = expression.split(",");
         return getSum(numbers);
     }
 
