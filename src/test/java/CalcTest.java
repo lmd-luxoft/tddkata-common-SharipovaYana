@@ -66,4 +66,11 @@ class CalcTest extends Object {
         int expected = -1;
         assertNotEquals(expected, actual);
     }
+    @Test
+    public void testNegative3(){
+        Calc calc = new Calc();
+        int actual = calc.sum("123;1");
+        int expected = -1;
+        assertNotEquals(expected, actual);
+    }
 }
