@@ -13,38 +13,6 @@ class CalcTest extends Object {
     }
 
     @Test
-    public void test0and1(){
-        Calc calc = new Calc();
-        int actual = calc.sum("0,1");
-        int expected = 1;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void test0and2(){
-        Calc calc = new Calc();
-        int actual = calc.sum("0,2");
-        int expected = 2;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void test1and2(){
-        Calc calc = new Calc();
-        int actual = calc.sum("1,2");
-        int expected = 3;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void test0and1and2(){
-        Calc calc = new Calc();
-        int actual = calc.sum("0,1,2");
-        int expected = 3;
-        assertEquals(expected, actual);
-    }
-
-    @Test
     public void test0and1and2NotEquals(){
         Calc calc = new Calc();
         int actual = calc.sum("0,1,2");
@@ -73,14 +41,6 @@ class CalcTest extends Object {
         Calc calc = new Calc();
         int actual = calc.sum("123,,2");
         int expected = -1;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testAddFiveArguments(){
-        Calc calc = new Calc();
-        int actual = calc.sum("1,5,1,3,2");
-        int expected = 12;
         assertEquals(expected, actual);
     }
 
