@@ -59,13 +59,7 @@ class CalcTest extends Object {
         int expected = -1;
         assertEquals(expected, actual);
     }
-    @Test
-    public void testNegative2(){
-        Calc calc = new Calc();
-        int actual = calc.sum("123,2,3,5");
-        int expected = -1;
-        assertEquals(expected, actual);
-    }
+
     @Test
     public void testNegative3(){
         Calc calc = new Calc();
@@ -91,22 +85,6 @@ class CalcTest extends Object {
     }
 
     @Test
-    public void testAddEmptyString(){
-        Calc calc = new Calc();
-        int actual = calc.sum("");
-        int expected = 0;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testAddNegative1(){
-        Calc calc = new Calc();
-        int actual = calc.sum(".");
-        int expected = -1;
-        assertEquals(expected, actual);
-    }
-
-    @Test
     public void testAddNegative2(){
         Calc calc = new Calc();
         int actual = calc.sum("123,,6");
@@ -121,10 +99,43 @@ class CalcTest extends Object {
         int expected = -1;
         assertEquals(expected, actual);
     }
+
     @Test
-    public void testAddNegative4(){
+    public void testSumWithDelimeter(){
         Calc calc = new Calc();
-        int actual = calc.sum("5;6");
+        int actual = calc.sum("//;\n1;2");
+        int expected = 3;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSumWithDelimeter2(){
+        Calc calc = new Calc();
+        int actual = calc.sum("//;\n");
+        int expected = 0;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSumWithDelimeter3(){
+        Calc calc = new Calc();
+        int actual = calc.sum("//;\n1,2");
+        int expected = -1;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSumWithDelimeter4(){
+        Calc calc = new Calc();
+        int actual = calc.sum("//;1;2");
+        int expected = -1;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSumWithDelimeter5(){
+        Calc calc = new Calc();
+        int actual = calc.sum(";\n1;2");
         int expected = -1;
         assertEquals(expected, actual);
     }
